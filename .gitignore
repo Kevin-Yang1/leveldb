@@ -6,3 +6,6 @@
 # Build directory.
 build/
 out/
+tests/
+tests/testdb/
+tests/workload_DB/
