@@ -1,0 +1,49 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug leveldb test.cc",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/tests/test", // 要调试的程序
+            "args": [], // 如果程序需要命令行参数，在这里添加
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/tests", // 设置工作目录为 tests 文件夹
+            "environment": [],
+            "externalConsole": false, // true 会在新终端窗口运行，false 在 VSCode 调试控制台
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                "description": "Enable pretty-printing for gdb",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build test.cc for leveldb" // 在启动调试前运行构建任务
+        },
+        {
+            "name": "Debug workload_runner.cpp",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/tests/workload_runner", // 要调试的程序
+            "args": ["workload_db", "workload.txt"], // 如果程序需要命令行参数，在这里添加
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/tests", // 设置工作目录为 tests 文件夹
+            "environment": [],
+            "externalConsole": false, // true 会在新终端窗口运行，false 在 VSCode 调试控制台
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                "description": "Enable pretty-printing for gdb",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Delete and Build workload_runner" // 在启动调试前运行构建任务
+        }
+
+    ]
+}

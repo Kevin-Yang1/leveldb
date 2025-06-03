@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**", // 保持这个，用于工作区内的其他文件
+                "${workspaceFolder}/include" // LevelDB 公共头文件
+               
+            ],
+            "defines": [
+                "LEVELDB_PLATFORM_POSIX" // 常见的 LevelDB 宏
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11", // C 标准可以保持或根据需要调整
+            "cppStandard": "c++11", // LevelDB 通常与 C++11 兼容
+            "intelliSenseMode": "linux-gcc-x64" // 匹配 g++ 编译器
+        }
+    ],
+    "version": 4
+}
